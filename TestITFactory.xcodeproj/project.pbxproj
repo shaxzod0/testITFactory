@@ -7,23 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		108CB0BCE9939A4488CB9798 /* Pods_TestITFactory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D0CDBD4710933D6158C998 /* Pods_TestITFactory.framework */; };
 		7956D1AA2893E03C0001114D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7956D1A92893E03C0001114D /* AppDelegate.swift */; };
 		7956D1AC2893E03C0001114D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7956D1AB2893E03C0001114D /* SceneDelegate.swift */; };
-		7956D1AE2893E03C0001114D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7956D1AD2893E03C0001114D /* ViewController.swift */; };
 		7956D1B12893E03C0001114D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7956D1AF2893E03C0001114D /* Main.storyboard */; };
 		7956D1B32893E03F0001114D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7956D1B22893E03F0001114D /* Assets.xcassets */; };
 		7956D1B62893E03F0001114D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7956D1B42893E03F0001114D /* LaunchScreen.storyboard */; };
+		7956D1C42893E2470001114D /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7956D1C32893E2470001114D /* MainController.swift */; };
+		7956D1C62893E27C0001114D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7956D1C52893E27C0001114D /* BaseViewController.swift */; };
+		7956D1C92893E3520001114D /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7956D1C82893E3520001114D /* AppColor.swift */; };
+		7956D1CB2893E52F0001114D /* BaseCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7956D1CA2893E52F0001114D /* BaseCollectionCell.swift */; };
+		7956D1CD2893E9B40001114D /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7956D1CC2893E9B40001114D /* MainCell.swift */; };
+		7956D1CF2893E9DB0001114D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7956D1CE2893E9DB0001114D /* Model.swift */; };
+		7956D1D62893F2FA0001114D /* AppUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7956D1D52893F2FA0001114D /* AppUrl.swift */; };
+		7956D1D82893F32E0001114D /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7956D1D72893F32E0001114D /* Repository.swift */; };
+		7956D1DA2893F54A0001114D /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7956D1D92893F54A0001114D /* MainViewModel.swift */; };
+		7956D1E02893F8580001114D /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7956D1DF2893F8580001114D /* SectionHeaderView.swift */; };
+		7956D1E228940B420001114D /* ExCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7956D1E128940B410001114D /* ExCollectionViewCell.swift */; };
+		7956D1E4289419670001114D /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7956D1E3289419670001114D /* MockData.swift */; };
+		7956D1E628941DCE0001114D /* FastingCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7956D1E528941DCE0001114D /* FastingCollection.swift */; };
+		7956D1E828941E940001114D /* HealthyCellection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7956D1E728941E940001114D /* HealthyCellection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32124D091BACDACA6758A99A /* Pods-TestITFactory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestITFactory.release.xcconfig"; path = "Target Support Files/Pods-TestITFactory/Pods-TestITFactory.release.xcconfig"; sourceTree = "<group>"; };
 		7956D1A62893E03C0001114D /* TestITFactory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestITFactory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7956D1A92893E03C0001114D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7956D1AB2893E03C0001114D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7956D1AD2893E03C0001114D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7956D1B02893E03C0001114D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7956D1B22893E03F0001114D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7956D1B52893E03F0001114D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7956D1B72893E03F0001114D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7956D1C32893E2470001114D /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		7956D1C52893E27C0001114D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		7956D1C82893E3520001114D /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		7956D1CA2893E52F0001114D /* BaseCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionCell.swift; sourceTree = "<group>"; };
+		7956D1CC2893E9B40001114D /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
+		7956D1CE2893E9DB0001114D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		7956D1D52893F2FA0001114D /* AppUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUrl.swift; sourceTree = "<group>"; };
+		7956D1D72893F32E0001114D /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		7956D1D92893F54A0001114D /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		7956D1DF2893F8580001114D /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
+		7956D1E128940B410001114D /* ExCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExCollectionViewCell.swift; sourceTree = "<group>"; };
+		7956D1E3289419670001114D /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		7956D1E528941DCE0001114D /* FastingCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingCollection.swift; sourceTree = "<group>"; };
+		7956D1E728941E940001114D /* HealthyCellection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyCellection.swift; sourceTree = "<group>"; };
+		79D0CDBD4710933D6158C998 /* Pods_TestITFactory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestITFactory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6F625BF8CCD598CFF679E68 /* Pods-TestITFactory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestITFactory.debug.xcconfig"; path = "Target Support Files/Pods-TestITFactory/Pods-TestITFactory.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				108CB0BCE9939A4488CB9798 /* Pods_TestITFactory.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +73,8 @@
 			children = (
 				7956D1A82893E03C0001114D /* TestITFactory */,
 				7956D1A72893E03C0001114D /* Products */,
+				89AF4A08EE77C461C0903C95 /* Pods */,
+				BB82415AC7950ACDBFCF5671 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +89,109 @@
 		7956D1A82893E03C0001114D /* TestITFactory */ = {
 			isa = PBXGroup;
 			children = (
-				7956D1A92893E03C0001114D /* AppDelegate.swift */,
-				7956D1AB2893E03C0001114D /* SceneDelegate.swift */,
-				7956D1AD2893E03C0001114D /* ViewController.swift */,
+				7956D1C72893E33B0001114D /* Extension */,
+				7956D1C12893E1D10001114D /* Base */,
+				7956D1C02893E1B60001114D /* Repository */,
+				7956D1BF2893E1AC0001114D /* Model */,
+				7956D1BE2893E1970001114D /* Controller */,
+				7956D1BD2893E16C0001114D /* App */,
 				7956D1AF2893E03C0001114D /* Main.storyboard */,
 				7956D1B22893E03F0001114D /* Assets.xcassets */,
 				7956D1B42893E03F0001114D /* LaunchScreen.storyboard */,
 				7956D1B72893E03F0001114D /* Info.plist */,
 			);
 			path = TestITFactory;
+			sourceTree = "<group>";
+		};
+		7956D1BD2893E16C0001114D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				7956D1A92893E03C0001114D /* AppDelegate.swift */,
+				7956D1AB2893E03C0001114D /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		7956D1BE2893E1970001114D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7956D1C22893E21E0001114D /* Main */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7956D1BF2893E1AC0001114D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7956D1CE2893E9DB0001114D /* Model.swift */,
+				7956D1E3289419670001114D /* MockData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7956D1C02893E1B60001114D /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				7956D1D52893F2FA0001114D /* AppUrl.swift */,
+				7956D1D72893F32E0001114D /* Repository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		7956D1C12893E1D10001114D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				7956D1C52893E27C0001114D /* BaseViewController.swift */,
+				7956D1CA2893E52F0001114D /* BaseCollectionCell.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		7956D1C22893E21E0001114D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7956D1D02893EDD80001114D /* SectionHeader */,
+				7956D1C32893E2470001114D /* MainController.swift */,
+				7956D1CC2893E9B40001114D /* MainCell.swift */,
+				7956D1E528941DCE0001114D /* FastingCollection.swift */,
+				7956D1E728941E940001114D /* HealthyCellection.swift */,
+				7956D1E128940B410001114D /* ExCollectionViewCell.swift */,
+				7956D1D92893F54A0001114D /* MainViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		7956D1C72893E33B0001114D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7956D1C82893E3520001114D /* AppColor.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		7956D1D02893EDD80001114D /* SectionHeader */ = {
+			isa = PBXGroup;
+			children = (
+				7956D1DF2893F8580001114D /* SectionHeaderView.swift */,
+			);
+			path = SectionHeader;
+			sourceTree = "<group>";
+		};
+		89AF4A08EE77C461C0903C95 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D6F625BF8CCD598CFF679E68 /* Pods-TestITFactory.debug.xcconfig */,
+				32124D091BACDACA6758A99A /* Pods-TestITFactory.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BB82415AC7950ACDBFCF5671 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79D0CDBD4710933D6158C998 /* Pods_TestITFactory.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +201,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7956D1BA2893E03F0001114D /* Build configuration list for PBXNativeTarget "TestITFactory" */;
 			buildPhases = (
+				47D0CF57775D85EB0427AB1E /* [CP] Check Pods Manifest.lock */,
 				7956D1A22893E03C0001114D /* Sources */,
 				7956D1A32893E03C0001114D /* Frameworks */,
 				7956D1A42893E03C0001114D /* Resources */,
+				1E9E892FCA4108F687646369 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +262,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1E9E892FCA4108F687646369 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestITFactory/Pods-TestITFactory-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestITFactory/Pods-TestITFactory-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestITFactory/Pods-TestITFactory-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47D0CF57775D85EB0427AB1E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestITFactory-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7956D1A22893E03C0001114D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7956D1AE2893E03C0001114D /* ViewController.swift in Sources */,
+				7956D1D62893F2FA0001114D /* AppUrl.swift in Sources */,
 				7956D1AA2893E03C0001114D /* AppDelegate.swift in Sources */,
+				7956D1E228940B420001114D /* ExCollectionViewCell.swift in Sources */,
+				7956D1E828941E940001114D /* HealthyCellection.swift in Sources */,
+				7956D1CD2893E9B40001114D /* MainCell.swift in Sources */,
+				7956D1C92893E3520001114D /* AppColor.swift in Sources */,
+				7956D1E4289419670001114D /* MockData.swift in Sources */,
+				7956D1E628941DCE0001114D /* FastingCollection.swift in Sources */,
+				7956D1D82893F32E0001114D /* Repository.swift in Sources */,
+				7956D1C62893E27C0001114D /* BaseViewController.swift in Sources */,
+				7956D1C42893E2470001114D /* MainController.swift in Sources */,
+				7956D1E02893F8580001114D /* SectionHeaderView.swift in Sources */,
+				7956D1CB2893E52F0001114D /* BaseCollectionCell.swift in Sources */,
 				7956D1AC2893E03C0001114D /* SceneDelegate.swift in Sources */,
+				7956D1CF2893E9DB0001114D /* Model.swift in Sources */,
+				7956D1DA2893F54A0001114D /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +466,7 @@
 		};
 		7956D1BB2893E03F0001114D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6F625BF8CCD598CFF679E68 /* Pods-TestITFactory.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +495,7 @@
 		};
 		7956D1BC2893E03F0001114D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32124D091BACDACA6758A99A /* Pods-TestITFactory.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
