@@ -21,28 +21,27 @@ class MainViewModel {
         }
     }
     
-    var categories: [Title] = [] {
+    var categories: [HealthyFood] = [] {
         didSet {
             self.reloadCollection?()
         }
     }
     init() {
-        getCategories()
-        getItems()
+        fetchItems()
     }
     
-    func getCategoryName(i: Int) -> Title {
-        let categoryName = categories[index]
-        return categoryName
+    func getCategoryName(i: Int) -> String {
+        return categories[i].title_name
     }
     
     func getCategoryCount() -> Int {
         return categories.count
     }
     
-    func getItems() {
+    func fetchItems() {
         Repository.shared.getItems { res in
             self.items = res[self.index].data
+            self.categories = res
         }
     }
     func getItem(i: Int) -> Items {
@@ -52,11 +51,6 @@ class MainViewModel {
         return Items(description: desc, id: id, image: image)
     }
     
-    func getCategories() {
-        Repository.shared.getItems { res in
-            self.categories = res
-        }
-    }
     func getItemsCount()->Int {
         return items.count
     }

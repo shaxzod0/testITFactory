@@ -33,6 +33,7 @@ class MainCell: BaseCollectionCell<Items> {
     override func updateUI(with model: Items) {
         itemDesc.text = model.description
         let url = URL(string: model.image)
+        itemImage.kf.indicatorType = .activity
         itemImage.kf.setImage(with: url)
     }
     

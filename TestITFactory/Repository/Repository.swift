@@ -9,9 +9,8 @@ import Alamofire
 
 class Repository {
     static let shared = Repository()
-    func getItems(compilation: @escaping(([Title])-> Void)) {
-        let url = AppUrl()
-        AF.request(url.baseUrl).responseDecodable(of: [Title].self){ res in
+    func getItems(compilation: @escaping(([HealthyFood])-> Void)) {
+        AF.request(API.Urls.url).responseDecodable(of: [HealthyFood].self){ res in
             guard let data = res.value else {
                 print("Error")
                 return

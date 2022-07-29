@@ -29,7 +29,7 @@ class SectionHeaderView: UICollectionReusableView {
         }
     }
     
-    func updateHeaderUI(with model: Title){
-        headerTitle.text = model.title_name
+    func updateTitle(_ title: String){
+        headerTitle.text = title
     }
 }

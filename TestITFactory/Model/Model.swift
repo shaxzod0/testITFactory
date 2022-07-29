@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Title: Codable{
+struct HealthyFood: Codable{
     let title_name: String
     let data: [Items]
 }
