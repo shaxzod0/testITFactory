@@ -9,7 +9,7 @@ import Foundation
 
 class API {
     enum Urls {
-        static let url = "https://run.mocky.io/v3/8b1192f4-32b1-4055-aeca-7e95cd178a30"
+        static let url = "https://run.mocky.io/v3/984c887b-bc90-48ad-b397-14f38e629fcd"
     }
     
 }

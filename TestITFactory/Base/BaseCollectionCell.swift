@@ -37,4 +37,7 @@ class BaseCollectionCell<CellModel>: UICollectionViewCell {
     }
     func updateUI(with model: CellModel){
     }
+    
+  
+    
 }

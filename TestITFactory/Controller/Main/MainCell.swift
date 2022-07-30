@@ -37,12 +37,11 @@ class MainCell: BaseCollectionCell<Items> {
         itemImage.kf.setImage(with: url)
     }
     
-    func setBackground (isSelected: Bool) {
-        if isSelected {
-            self.layer.borderWidth = 3
-            self.layer.borderColor = UIColor.blue.cgColor
-        } else {
-            self.layer.borderWidth = 0
+
+    override var isSelected: Bool {
+        didSet {
+                self.layer.borderWidth = isSelected ? 3 : 0
+                self.layer.borderColor = UIColor.blue.cgColor
         }
     }
 }

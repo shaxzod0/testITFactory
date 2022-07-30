@@ -7,7 +7,29 @@
 
 import UIKit
 
-class MainController: BaseViewController {
+protocol AvailabilitySelection{
+    func decreaseCount()
+    func isAvailable() -> Bool
+}
+
+class MainController: BaseViewController, AvailabilitySelection {
+    func decreaseCount() {
+        count -= 1
+    }
+    
+    var count: Int = 0
+    
+    
+    func isAvailable() -> Bool {
+        if count >= 6 {
+            return false
+        } else {
+            count += 1
+            return true
+        }
+       
+    }
+    
     let viewModel = MainViewModel()
     lazy var collectionView: UICollectionView = {
         let l = UICollectionViewFlowLayout()
@@ -18,6 +40,7 @@ class MainController: BaseViewController {
         cl.delegate = self
         cl.dataSource = self
         cl.register(MainCell.self, forCellWithReuseIdentifier: MainCell.reuseIdentifier)
+        cl.allowsMultipleSelection = true
         cl.register(SectionHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeaderView.identifier)
         cl.register(ExCollectionViewCell.self, forCellWithReuseIdentifier: ExCollectionViewCell.reuseIdentifier)
         cl.register(FastingCollection.self, forCellWithReuseIdentifier: FastingCollection.reuseIdentifier)
@@ -65,13 +88,16 @@ extension MainController: UICollectionViewDelegate, UICollectionViewDelegateFlow
         switch indexPath.section {
         case 0:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ExCollectionViewCell.reuseIdentifier, for: indexPath) as! ExCollectionViewCell
+            cell.delegate = self
             return cell
             
         case 1:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FastingCollection.reuseIdentifier, for: indexPath) as! FastingCollection
+            cell.delegate = self
             return cell
         case 2:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HealthyCollection.reuseIdentifier, for: indexPath) as! HealthyCollection
+            cell.delegate = self
             return cell
         default:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ExCollectionViewCell.reuseIdentifier, for: indexPath) as! ExCollectionViewCell
@@ -88,5 +114,14 @@ extension MainController: UICollectionViewDelegate, UICollectionViewDelegateFlow
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+    }
+    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+//        if let selectedItems = collectionView.indexPathsForSelectedItems {
+//            if selectedItems.contains(indexPath) {
+//                collectionView.deselectItem(at: indexPath, animated: true)
+//                return false
+//            }
+//        }
+        return true
     }
 }

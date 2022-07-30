@@ -10,6 +10,7 @@ import UIKit
 class HealthyCollection: BaseCollectionCell<Items> {
     
     var currentSelected: Int?
+    var delegate: AvailabilitySelection?
     let viewModel = MainViewModel()
     lazy var collectionView: UICollectionView = {
         let lay = UICollectionViewFlowLayout()
@@ -20,6 +21,7 @@ class HealthyCollection: BaseCollectionCell<Items> {
         let cl = UICollectionView(frame: .zero, collectionViewLayout: lay)
         cl.delegate = self
         cl.dataSource = self
+        cl.allowsMultipleSelection = true
         cl.showsHorizontalScrollIndicator = false
         cl.register(MainCell.self, forCellWithReuseIdentifier: MainCell.reuseIdentifier)
         cl.backgroundColor = .clear
@@ -41,6 +43,7 @@ class HealthyCollection: BaseCollectionCell<Items> {
 }
 
 extension HealthyCollection: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.getItemsCount()
     }
@@ -48,15 +51,27 @@ extension HealthyCollection: UICollectionViewDelegate, UICollectionViewDataSourc
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainCell.reuseIdentifier, for: indexPath) as! MainCell
         cell.updateUI(with: viewModel.getItem(i: indexPath.item))
-        cell.setBackground(isSelected: currentSelected == indexPath.item)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: (collectionView.frame.width) / 2 , height: 300)
     }
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        currentSelected = indexPath.item
-        self.collectionView.reloadData()
+    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        if let available = delegate?.isAvailable() {
+            return available
+        }
+        return true
     }
+    
+    func collectionView(_ collectionView: UICollectionView, shouldDeselectItemAt indexPath: IndexPath) -> Bool {
+        if let selectedItems = collectionView.indexPathsForSelectedItems {
+               if selectedItems.contains(indexPath) {
+                   delegate?.decreaseCount()
+                   return true
+               }
+           }
+        return false
+    }
+
 }
