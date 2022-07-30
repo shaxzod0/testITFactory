@@ -22,6 +22,7 @@ class MainController: BaseViewController, AvailabilitySelection {
     
     func isAvailable() -> Bool {
         if count >= 6 {
+            showAlert(count: count)
             return false
         } else {
             count += 1
@@ -123,5 +124,11 @@ extension MainController: UICollectionViewDelegate, UICollectionViewDelegateFlow
 //            }
 //        }
         return true
+    }
+    
+    func showAlert(count: Int) {
+        let alert = UIAlertController(title: "Your already choose \(count) elements", message: "Please unfollow which you don't want", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default))
+        present(alert, animated: true)
     }
 }
